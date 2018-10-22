@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCONTROLS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Full Name" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5" />
+        <TextBox Grid.Column="1" Width="250" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5" Grid.Row="1" Text="Sex"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <RadioButton  GroupName="Sex" Content="Male" IsChecked="True" Margin="5"/>
+            <RadioButton GroupName="Sex" Content=" Female" Margin="5"/>
+        </StackPanel>
+        <TextBlock Text="Do you own"
+                   Grid.Row="2"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left">
+            <CheckBox Content="Desctop" Margin="5"/>
+            <CheckBox Content="Laptop" Margin="5"/>
+            <CheckBox Content="Table" Margin="5"/>
+
+        </StackPanel>
+        <TextBlock Text="Your job" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5">
+            <ComboBoxItem Content="Programmer"/>
+            <ComboBoxItem Content="Designer"/>
+            <ComboBoxItem Content="CTO"/>
+            <ComboBoxItem Content="CEO"/>
+            <ComboBoxItem Content="QA"/>
+        </ComboBox>
+        <TextBlock Text="Promised Delivery Date" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"/>
+        <Calendar Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5"/>
+        <WrapPanel Grid.Row="5" Grid.ColumnSpan="2">
+            <Rectangle Fill="Red" Width="50" Height="10"/>
+            <Rectangle Fill="Orange" Width="50" Height="10"/>
+            <Rectangle Fill="Yellow" Width="50" Height="10"/>
+            <Rectangle Fill="Green" Width="50" Height="10"/>
+            <Rectangle Fill="Blue" Width="50" Height="10"/>
+            <Rectangle Fill="DarkBlue" Width="50" Height="10"/>
+            <Rectangle Fill="BlueViolet" Width="50" Height="10"/>
+            <Rectangle Fill="Red" Width="50" Height="10"/>
+            <Rectangle Fill="Orange" Width="50" Height="10"/>
+            <Rectangle Fill="Yellow" Width="50" Height="10"/>
+        </WrapPanel>
     </Grid>
 </Window>
